@@ -106,7 +106,7 @@
  
    * = Tested OK     X = Incompatible     ? Untested
 
-As well as the above, the software can work with xflash for some functions such as EXE running etc.
+As well as the above, the software can work with xflash for some functions such as EXE running etc. It works on both 1.000/1.067 Xplorer64 versions.
  
  Credits etc
  ===========
