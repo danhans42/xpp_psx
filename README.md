@@ -61,7 +61,7 @@
   |       PE |     20    | 38            |  12             |  IN         |
   |     BUSY |     21    | 40            |  11             |  IN         |
   |      ACK |      5    | 29            |  10             |  IN         |
-  |      GND |      -    | 6,9,25,30     |  18-25          |  IN         | 
+  |      GND |      -    | 6,9,25,30     |  18-25          |             | 
   
   
  Direction above is relative to the Raspberry Pi.
