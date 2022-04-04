@@ -2,7 +2,7 @@
  * xpp - XPlorer Communications For RaspberryPi     *
  * by danhans42 (danhans42@gmail.com)               *
  * Version 0.1 CODENAME: DOESFUCKALL                *
- * github.com/danhans42/xpp                         *
+ * github.com/danhans42/xpp_psx                     *
  *                                                  *
  * To see the Raspberry Pi GPIO pinout              *
  * run  $gpio readall                               *
