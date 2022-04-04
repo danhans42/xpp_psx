@@ -3,7 +3,7 @@
  * xpp - XPlorer Communications For RaspberryPi     *
  * by danhans42 (danhans42@gmail.com)               *
  *                                                  *
- * github.com/danhans42/xpp                         *
+ * github.com/danhans42/xpp_psx                     *
  *                                                  *
  * See xpp.h for wiring scheme                      *
  ****************************************************/
