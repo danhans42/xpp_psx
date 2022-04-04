@@ -14,18 +14,18 @@
 
  You can probably try this on anything WiringPi has been ported to with minimal effort - mileage may vary.
 
- Parts Shopping List
- ===================
+ Hardware Needed
+ ===============
  
  - [ ] PSX/N64 [of course]
- - [ ] Xplorer Cart of some description
+ - [ ] Xplorer/Xploder Cart of some description
  - [ ] RaspberryPi (ZeroW is ideal) running Linux (only tested on raspbian-minimal)
  - [ ] Level shifters (possibly - see hardware)
  - [ ] F-F Dupont leads for wiring up ( 14 if running 3.3v/XP64 or ~32 for level shifters)  
 
 
- Hardware
- ========
+ Hardware Connections
+ ====================
 
  Wire up via level shifters (observe signal direction if not bidirectional).
  
@@ -36,29 +36,34 @@
  If you only want Xplorer64.. it uses 3.3v levels on its DB25 - so no level shiftery needed there.
 
  Do not try and be a hero and run the rasberry pi without the +3.3v mod or level shifters.. Pi GPIO
- is not 5v tolerant
+ is NOT 5v tolerant.
  
- Pinouts/Connections
- ===================
+ Check the orientation of your particular Pi Device.
  
-  |      Name|    BCM IO | RPi GPIO PIN  | Xplorer DB25 PIN|
-  |----------|-----------|---------------|-----------------|
-  |       D0 |     17    | 11            |   2             |
-  |       D1 |     18    | 12            |   3             |             
-  |       D2 |     27    | 13            |   4             |
-  |       D3 |     22    | 15            |   5             |
-  |       D4 |     23    | 16            |   6             |
-  |       D5 |     24    | 18            |   7             |
-  |       D6 |     25    | 22            |   8             |
-  |       D7 |      4    | 7             |   9             |
-  |      SEL |     12    | 32            |  17             |
-  |     SLCT |     16    | 36            |  13             |
-  |       PE |     20    | 38            |  12             |
-  |     BUSY |     21    | 40            |  11             |
-  |      ACK |      5    | 29            |  10             |
-  |      GND |      -    | 6,9,25,30     |  18-25          |   
+ 
+  |      Name|    BCM IO | RPi GPIO PIN  | Xplorer DB25 PIN|  Direction  |
+  |----------|-----------|---------------|-----------------|-------------|
+  |       D0 |     17    | 11            |   2             |  OUT        |
+  |       D1 |     18    | 12            |   3             |  OUT        |             
+  |       D2 |     27    | 13            |   4             |  OUT        |
+  |       D3 |     22    | 15            |   5             |  OUT        |
+  |       D4 |     23    | 16            |   6             |  OUT        |
+  |       D5 |     24    | 18            |   7             |  OUT        |
+  |       D6 |     25    | 22            |   8             |  OUT        |
+  |       D7 |      4    | 7             |   9             |  OUT        |
+  |      SEL |     12    | 32            |  17             |  OUT        |
+  |     SLCT |     16    | 36            |  13             |  IN         | 
+  |       PE |     20    | 38            |  12             |  IN         |
+  |     BUSY |     21    | 40            |  11             |  IN         |
+  |      ACK |      5    | 29            |  10             |  IN         |
+  |      GND |      -    | 6,9,25,30     |  18-25          |  IN         | 
   
-
+  
+ Direction above is relative to the Raspberry Pi.
+  
+ For level shifting you can use something like the cheap level shifters you find on aliexpress/ebay etc - just make sure to observe the signal direction    if not bidirectional. Something like TXB0108 or BSS138 based works well. 
+ 
+ 
  Building 'xpp'
  ============== 
 
@@ -73,6 +78,25 @@
 
  Xplorers are funny fuckers - some stuff works on some versions and not on others. Mileage may vary.
  Xplorer64 only supports flash/status/upload&exec bin commands.
+ 
+ Commands/Features
+ ================
+ 
+ |Command                                     |FX4.2 |PRO 2.0   |XP_1.9  |XP_64    |
+ |--------------------------------------------|------|----------|--------|---------|                               
+ /status                                      |  *   |    *     |   *    |   *     |  
+ /mcstatus*                                   |  *   |    X     |   X    |   X     |   
+ /reboot                                      |  *   |    *     |   *    |   X     |        
+ /freeze*                                     |  *   |    *     |   *    |   X     |        
+ /unfreeze*                                   |  *   |    *     |   *    |   X     |     
+ /peek <address>                              |  *   |    *     |   *    |   X     |     
+ /view <address>                              |  *   |    *     |   *    |   X     |        
+ /upload <binfile>                            |  *   |    *     |   *    |   X     |       
+ /download <outfile> <address> <length>       |  *   |    *     |   *    |   X     |        
+ /execbin <binfile> <address>                 |  *   |    *     |   *    |   *     |        
+ /exe <psxexe>                                |  *   |    *     |   *    |   X     |
+ 
+   * = Tested OK     X = Incompatible     ? Untested
 
 
   
