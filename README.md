@@ -33,8 +33,12 @@
  connector solder joint. I have done this mod on a standard Xplorer (no SRAM), and it still works 
  with my parallel port perfectly on my machine. However do this at your own risk!
 
+ Here is my 3.3v modded PSX Xplorer connected to a Pi 3a
+ 
+ ![](https://github.com/danhans42/xpp_psx/blob/main/images/xplorer_pi3a.jpg)
+ 
  If you only want to talk to an Xplorer64.. it uses 3.3v levels on its DB25 - so no level shiftery needed.
-
+ 
  Do not try and be a hero and run the rasberry pi without the +3.3v mod or level shifters.. Pi GPIO
  is NOT 5v tolerant.
  
