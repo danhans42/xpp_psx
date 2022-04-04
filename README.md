@@ -31,7 +31,8 @@
  
  Alternatively cut the VCC pins to Xplorer 74HC373/74HC245 and connect to +3.3v pin on the PCB/PIO
  connector solder joint. I have done this mod on a standard Xplorer (no SRAM), and it still works 
- with my parallel port perfectly on my machine. However do this at your own risk!
+ with my parallel port perfectly on my machine. Your EEPROM needs to run at 5v or it will not work/flash
+ properly. Assume SRAM was the same. However do this at your own risk! 
 
  Here is my 3.3v modded PSX Xplorer connected to a Pi 3a
  
