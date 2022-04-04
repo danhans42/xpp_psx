@@ -40,7 +40,7 @@
  
  If you only want to talk to an Xplorer64.. it uses 3.3v levels on its DB25 - so no level shiftery needed.
  
- ![](https://github.com/danhans42/xpp_psx/blob/main/images/xplorer_pi3a.jpg)
+ ![](https://github.com/danhans42/xpp_psx/blob/main/images/img_20210125_100038.jpg)
  
  Do not try and be a hero and run the Raspberry Pi without the +3.3v mod or level shifters on PSX.. Pi GPIO
  is NOT 5v tolerant.
