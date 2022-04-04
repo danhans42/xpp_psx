@@ -27,7 +27,7 @@
  Hardware Connections
  ====================
 
- Wire up via level shifters (observe signal direction if not bidirectional).
+ Wire up via level shifters (observe signal direction if not bidirectional). You can use something like the TXB0108 for example. 
  
  Alternatively cut the VCC pins to Xplorer 74HC373/74HC245 and connect to +3.3v pin on the PCB/PIO
  connector solder joint. I have done this mod on a standard Xplorer (no SRAM), and it still works 
