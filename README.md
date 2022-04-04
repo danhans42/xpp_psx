@@ -40,11 +40,13 @@
  
  If you only want to talk to an Xplorer64.. it uses 3.3v levels on its DB25 - so no level shiftery needed.
  
- Do not try and be a hero and run the rasberry pi without the +3.3v mod or level shifters.. Pi GPIO
+ ![](https://github.com/danhans42/xpp_psx/blob/main/images/xplorer_pi3a.jpg)
+ 
+ Do not try and be a hero and run the Raspberry Pi without the +3.3v mod or level shifters on PSX.. Pi GPIO
  is NOT 5v tolerant.
  
- Check the orientation of your particular Pi Device.
- 
+ Check the orientation of your particular Pi Device for pin numbering.
+
  
   |      Name|    BCM IO | RPi GPIO PIN  | Xplorer DB25 PIN|  Direction  |
   |----------|-----------|---------------|-----------------|-------------|
