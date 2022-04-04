@@ -100,10 +100,11 @@
 
 As well as the above, the software can work with xflash for some functions such as EXE running etc.
  
- Credits Etc
+ Credits etc
  ===========
  
- Thanks to everyone on the psx.dev discord. If you like this software or use it please swing by and let me know.
+ Thanks to everyone on the psx.dev discord. If you like this software or use it please swing by and let me know. The protocol was kindly documented in the psx-spx document by Martin Korth. See https://problemkaputt.de/psx-spx.htm, better version here https://psx-spx.consoledev.net/
+
  
  Im not a C programmer at all, so the above may seem somewhat amatuerish. Feel free to credit and rewrite or whatever. The code was jsut some simple tests I wrote to see if it would work and how it would perform.
  
