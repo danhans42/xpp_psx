@@ -1,6 +1,6 @@
 # xpp v0.1 - xplorer control utility
 
- by @danhans42 - find me on discord - http://psx.dev
+ by @danhans42
 
  Simple app that can talk to an Xplorer/Xploder cart using raspberry pi gpio. It works with both PSX and N64 varieties, on 
  all known firmware versions. N64 is however very limited on what it will work with (only two commands).
@@ -30,10 +30,10 @@
  Wire up via level shifters (observe signal direction if not bidirectional).
  
  Alternatively cut the VCC pins to Xplorer 74HC373/74HC245 and connect to +3.3v pin on the PCB/PIO
- connector solder joint. I have done this mod, and it still works with my parallel port perfectly
- on my machine. However do this at your own risk.
+ connector solder joint. I have done this mod on a standard Xplorer (no SRAM), and it still works 
+ with my parallel port perfectly on my machine. However do this at your own risk!
 
- If you only want Xplorer64.. it uses 3.3v levels on its DB25 - so no level shiftery needed there.
+ If you only want to talk to an Xplorer64.. it uses 3.3v levels on its DB25 - so no level shiftery needed.
 
  Do not try and be a hero and run the rasberry pi without the +3.3v mod or level shifters.. Pi GPIO
  is NOT 5v tolerant.
@@ -61,8 +61,7 @@
   
  Direction above is relative to the Raspberry Pi.
   
- For level shifting you can use something like the cheap level shifters you find on aliexpress/ebay etc - just make sure to observe the signal direction    if not bidirectional. Something like TXB0108 or BSS138 based works well. 
- 
+ For level shifting you can use something like the level shifters you can get from Adafruit/Sparkfun or aliexpress/ebay etc - just make sure to observe the signal direction    if not bidirectional. Something like TXB0108 or BSS138 based works well. 
  
  Building 'xpp'
  ============== 
@@ -76,11 +75,13 @@
  Compatibility
  =============
 
- Xplorers are funny fuckers - some stuff works on some versions and not on others. Mileage may vary.
+ Xplorers are funny fuckers from a command perspective - some stuff works on some versions and not on others. Mileage may vary.
  Xplorer64 only supports flash/status/upload&exec bin commands.
  
  Commands/Features
  ================
+ 
+ Below is a summary of my experiments with a few different carts/versions.
  
  |Command                                     |FX4.2 |PRO 2.0   |XP_1.9  |XP_64    |
  |--------------------------------------------|------|----------|--------|---------|                               
@@ -104,9 +105,8 @@ As well as the above, the software can work with xflash for some functions such 
  ===========
  
  Thanks to everyone on the psx.dev discord. If you like this software or use it please swing by and let me know. The protocol was kindly documented in the psx-spx document by Martin Korth. See https://problemkaputt.de/psx-spx.htm, better version here https://psx-spx.consoledev.net/
-
  
  Im not a C programmer at all, so the above may seem somewhat amatuerish. Feel free to credit and rewrite or whatever. The code was jsut some simple tests I wrote to see if it would work and how it would perform.
  
-  
- 
+Big Shout out to Tim S (Xflash) and everyone on the psx.dev discord. Come say hello :)  
+
